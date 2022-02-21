@@ -27,18 +27,16 @@ Clone this repository or download the Zip folder:
 ```
 https://github.com/VSeray/BookStore.git
 ```
- 
+# Run project
 In the project directory, you can run:
 
-### `npm start`
+`$ npm install`: Installs all modules that are listed on package. json file and their dependencies.
 
-### `npm test`
+`$ npm build`: Lets you perform any necessary building/prep tasks for your project, prior to it being used in another project.
 
-### `npm run build`
+`$ npm test`: It is used to test a package
 
-### `npm run eject`
-
-### `npm run build` fails to minify
+`$ npm start`: It is a script that is used to execute the defined file in it without typing its execution command.
 
 
 ## Authors

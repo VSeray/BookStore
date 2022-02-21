@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
@@ -9,17 +9,17 @@ function App() {
   return (
     <main className="App">
       <Navbar />
-      <Router>
+      <Routes>
         <Route path="/books">
           <Books />
         </Route>
         <Route path="/categories">
           <Categories />
         </Route>
-        <Route path="/">
+        <Route path='/'>
           <Navigate to="/books" />
         </Route>
-      </Router>
+      </Routes>
     </main>
   );
 }

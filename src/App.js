@@ -16,7 +16,7 @@ function App() {
         <Route path="/categories">
           <Categories />
         </Route>
-        <Route path='/'>
+        <Route path="/">
           <Navigate to="/books" />
         </Route>
       </Routes>

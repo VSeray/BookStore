@@ -1,20 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import './index.css';
+import Books from './components/books/Books';
+import Categories from './components/categories/Categories';
+import Navigation from './components/Navigation';
 import store from './redux/configureStore';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <div className="container">
     <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <Navigation />
+      <Routes>
+        <Route
+          path="/"
+          exact
+          element={(
+            <Provider store={store}>
+              <Books />
+
+            </Provider>
+          )}
+        />
+        <Route
+          path="/Categories"
+          exact
+          element={
+            <Categories />
+          }
+        />
+      </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
+  </div>,
   document.getElementById('root'),
 );
-
-reportWebVitals();

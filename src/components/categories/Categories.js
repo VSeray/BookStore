@@ -1,8 +1,8 @@
-import React from 'react';
-
 function Categories() {
   return (
-    <div>Under construction</div>
+    <div>
+      <p>Under construction</p>
+    </div>
   );
 }
 
